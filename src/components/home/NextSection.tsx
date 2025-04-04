@@ -16,7 +16,7 @@ export const NextSection: React.FC<NextSectionProps> = ({ text }) => {
     { value: "1", label: "Option 1" },
     { value: "2", label: "Option 2" },
     { value: "3", label: "Option 3" },
-    { value: "4", label: "End conversation" }
+    { value: "4", label: "Option 4" }
   ];
   
   return (
@@ -52,11 +52,7 @@ export const NextSection: React.FC<NextSectionProps> = ({ text }) => {
                     {option.value}
                   </span>
                   <span className="text-lg font-normal">
-                    {option.value === "4" ? (
-                      option.label
-                    ) : (
-                      <>&quot;{option.label}&quot;</>
-                    )}
+                    {option.label}
                   </span>
                 </Label>
               </div>
