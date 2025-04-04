@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 
 interface NextSectionProps {
   text: string;
@@ -9,6 +10,7 @@ interface NextSectionProps {
 
 export const NextSection: React.FC<NextSectionProps> = ({ text }) => {
   const [selectedOption, setSelectedOption] = useState<string>("1");
+  const [inputText, setInputText] = useState<string>("");
   
   return (
     <section
@@ -16,6 +18,13 @@ export const NextSection: React.FC<NextSectionProps> = ({ text }) => {
       role="complementary"
     >
       <p className="text-lg leading-none mb-4">{text}</p>
+      
+      <Textarea 
+        placeholder="Enter your response..." 
+        className="mb-4 bg-white"
+        value={inputText}
+        onChange={(e) => setInputText(e.target.value)}
+      />
       
       <div className="mb-6">
         <RadioGroup
