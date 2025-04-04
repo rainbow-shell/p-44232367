@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { Send } from "lucide-react";
 
 interface NextSectionProps {
   text: string;
@@ -26,12 +28,17 @@ export const NextSection: React.FC<NextSectionProps> = ({ text }) => {
     >
       <p className="text-lg leading-none mb-4">{text}</p>
       
-      <Textarea 
-        placeholder="Enter your response..." 
-        className="mb-6 bg-white"
-        value={inputText}
-        onChange={(e) => setInputText(e.target.value)}
-      />
+      <div className="flex gap-2 mb-6">
+        <Textarea 
+          placeholder="I would like to..." 
+          className="bg-white"
+          value={inputText}
+          onChange={(e) => setInputText(e.target.value)}
+        />
+        <Button variant="outline" className="p-2 h-auto" aria-label="Send">
+          <Send className="h-5 w-5" />
+        </Button>
+      </div>
       
       <div className="mb-6">
         <RadioGroup
