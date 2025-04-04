@@ -14,7 +14,7 @@ export const NextSection: React.FC<NextSectionProps> = ({ text }) => {
   
   return (
     <section
-      className="bg-[rgba(217,217,217,1)] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] self-center w-[405px] max-w-full text-black font-normal tracking-[-0.36px] mt-[29px] pt-3 px-[19px] rounded-[11px]"
+      className="self-center w-[405px] max-w-full text-black font-normal tracking-[-0.36px] mt-[29px] pt-3 px-[19px] rounded-[11px]"
       role="complementary"
     >
       <p className="text-lg leading-none mb-4">{text}</p>
