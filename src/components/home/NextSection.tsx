@@ -13,9 +13,9 @@ export const NextSection: React.FC<NextSectionProps> = ({ text }) => {
   const [inputText, setInputText] = useState<string>("");
   
   const options = [
-    { value: "1", label: "What happened next?" },
-    { value: "2", label: "Who was in the lab?" },
-    { value: "3", label: "You mentioned a smell?" },
+    { value: "1", label: "Option 1" },
+    { value: "2", label: "Option 2" },
+    { value: "3", label: "Option 3" },
     { value: "4", label: "End conversation" }
   ];
   
